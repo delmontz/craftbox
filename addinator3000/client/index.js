@@ -11,7 +11,7 @@ console.log(add(5,6));
 class ViewManager{
     connectEventHandlers(){
         document.getElementById('form-numbers')
-            .addEventListener('submit',this.onSubmit);
+            .addEventListener('submit',this.onSubmit.bind(this));
     }
 
     onSubmit(event){
@@ -20,9 +20,16 @@ class ViewManager{
         let num2 = document.getElementById('input-num2').value;
         num1 = parseInt(num1,10);
         num2 = parseInt(num2,10);
-        let ans = add(num1,num2);
-        alert(ans);
+        
+        const sum = add(num1, num2);
+
+        this.renderSum(sum);
     }
+
+    renderSum(sum){
+        document.querySelector('.sum').textContent = sum;
+    }
+
 }
 
 const mg = new ViewManager();
