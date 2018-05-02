@@ -2,14 +2,17 @@ const add = require('./multiply.js');
 
 class ViewManager{
     connectEventHandlers(){
-        //テストコード
-        let singleSelectNum = document.getElementsByClassName('input-num');
+        /* test code */
+        console.log(document.getElementById('cal_button'));
+        /* end test */
 
-        document.getElementById('form-numbers')
-            .addEventListener('submit',this.onSubmit.bind(this));
+        document.getElementById('cal_button')
+            .addEventListener('submit',this.onCal.bind(this));
+        document.getElementById('add_button')
+            .addEventListener('submit',this.onAdd.bind(this));
     }
 
-    onSubmit(event){
+    onCal(event){
         event.preventDefault();
         /*
         
@@ -20,14 +23,22 @@ class ViewManager{
         
         const sum = multiply(num1, num2);
         */
-       let singleSelectNum = document.getElementsByClassName('input-num');
+        let allNumObj = document.querySelectorAll('.num-tag');
+        let forAnsVar = 1;
+        for(let tmpNum in allNumObj){
+            forAnsVar *= parseInt(tmpNum.value,10);
+        }
 
-
-        this.renderSum(sum);
+        this.renderSum(forAnsVar);
     }
 
     renderSum(sum){
-        document.querySelector('.ans').textContent = sum;
+        document.getElementById('ans').textContent = sum;
+    }
+
+    onAdd(){
+        event.preventDefault();    
+
     }
 
 }

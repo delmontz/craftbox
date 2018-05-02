@@ -14,12 +14,12 @@
   text-align: center;
 }
 
-.ans{
+#ans{
   font-size: 100px;
   font-weight: bold;
 }
 
-#num-tag{
+.num-tag{
   margin-top: 10px;
   margin-bottom: 20px;
 }
