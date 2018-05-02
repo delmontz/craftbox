@@ -14,7 +14,12 @@
   text-align: center;
 }
 
-.sum{
+.ans{
   font-size: 100px;
   font-weight: bold;
+}
+
+#num-tag{
+  margin-top: 10px;
+  margin-bottom: 20px;
 }
