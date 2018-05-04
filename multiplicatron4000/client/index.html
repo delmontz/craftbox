@@ -4,25 +4,22 @@
         <meta charset="UTF-8">
         <link href="styles.css" rel="stylesheet" type="text/css">
     </head>
-    <body>
-        <form id="form-numbers">
+    <body id="view">
+        <div id="num-label">
             <div>
-                <div>
-                    <input class="num-tag" type="text" size="3"/>
-                </div>
-                <div>
-                    <input class="num-tag" type="text" size="3"/>
-                </div>
-            </div>
-            <hr>
-            <div id="ans">?</div>
-            <div>
-                <input id="cal_button" type="submit" value="計算!"/>
-                <button id="button2">button2</button>
+                <input class="num-tag" type="text" size="3"/>
             </div>
             <div>
-                <input id="add_button" type="submit" value="<追加>"/>
+                <input class="num-tag" type="text" size="3"/>
             </div>
+        </div>
+        <hr>
+        <div id="ans">?</div>
+        <form id="cal_button">
+            <input type="submit" value="計算!"/>
+        </form>
+        <form id="add_button">
+            <input type="submit" value="<追加>"/>
         </form>
         <script src="index.js"></script>
     </body>

@@ -1,14 +1,14 @@
-#form-numbers{
+#view{
   width: 200px;
   margin: 0 auto;
   text-align: center;
 }
 
-#form-numbers > div{
+#view > div{
   padding: 10px 20px;
 }
 
-#form-numbers hr, input[type=text]{
+#view hr, input[type=text]{
   width: 80px;
   font-size: 36 px;
   text-align: center;
@@ -20,6 +20,11 @@
 }
 
 .num-tag{
+  margin-top: 10px;
+  margin-bottom: 20px;
+}
+
+form{
   margin-top: 10px;
   margin-bottom: 20px;
 }

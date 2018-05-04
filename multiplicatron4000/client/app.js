@@ -6,15 +6,13 @@ class ViewManager{
         console.log(document.getElementById('cal_button'));
         /* end test */
 
-        document.getElementById('form-numbers')
-            .addEventListener('submit', this.onSubmit.bind(this), false);
+        document.getElementById('cal_button')
+            .addEventListener('submit', this.onCal.bind(this), false);
+        document.getElementById('add_button')
+            .addEventListener('submit', this.onAdd.bind(this), false);
     }
 
-    onSubmit(event){
-        /* test code */
-        console.log(event.target.id);
-        /* test end */
-
+    onCal(event){
         event.preventDefault();
         let allNumObj = document.querySelectorAll('.num-tag');
         let forAnsVar = 1;
@@ -23,6 +21,13 @@ class ViewManager{
         }
 
         this.renderSum(forAnsVar);
+    }
+
+    onAdd(){
+        event.preventDefault();
+        let allNumLabel = document.getElementById('num-label');
+        let clone = allNumLabel.firstElementChild.cloneNode(true);
+        allNumLabel.appendChild(clone);
     }
 
     renderSum(sum){
